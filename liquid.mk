@@ -17,25 +17,16 @@
 $(call inherit-product, device/samsung/hero2lte/device_hero2lte.mk)
 $(call inherit-product, device/samsung/hero-common/hero-common.mk)
 
-# $(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Get the prebuilt list of APNs
-$(call inherit-product, vendor/omni/config/gsm.mk)
-
-# Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-
-# must be before including omni part
-TARGET_BOOTANIMATION_SIZE := 1080p
-
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+# Inherit some common LiquidRemix stuff.
+$(call inherit-product, vendor/liquid/config/common_full_phone.mk)
 
 ALLOW_MISSING_DEPENDENCIES=true
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := omni_hero2lte
+PRODUCT_NAME := liquid_hero2lte
 PRODUCT_DEVICE := hero2lte
 PRODUCT_MODEL := SM-G935F
 PRODUCT_BRAND := samsung
