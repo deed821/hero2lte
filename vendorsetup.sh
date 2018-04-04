@@ -1,3 +1,1 @@
-add_lunch_combo lineage_hero2lte-eng
-add_lunch_combo lineage_hero2lte-userdebug
-add_lunch_combo lineage_hero2lte-user
+add_lunch_combo rr_hero2lte-userdebug
